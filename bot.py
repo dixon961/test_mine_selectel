@@ -8,14 +8,14 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 # Загружаем переменные окружения
 load_dotenv()
-API_TOKEN = os.getenv("TG_BOT_TOKEN")
+API_TOKEN = os.getenv("API_TOKEN")
 ALLOWED_CHAT_ID = int(os.getenv("ALLOWED_CHAT_ID", 0))
 
-if not BOT_TOKEN:
-    raise ValueError("Не найден TG_BOT_TOKEN в файле .env")
+if not API_TOKEN:
+    raise ValueError("Не найден API_TOKEN в файле .env")
 
 # Инициализация бота и диспетчера
-bot = Bot(token=BOT_TOKEN)
+bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
 
 # --- MOCK STATE (Фейковое состояние для тестов) ---
