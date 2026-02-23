@@ -8,7 +8,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 # Загружаем переменные окружения
 load_dotenv()
-BOT_TOKEN = os.getenv("TG_BOT_TOKEN")
+API_TOKEN = os.getenv("TG_BOT_TOKEN")
 ALLOWED_CHAT_ID = int(os.getenv("ALLOWED_CHAT_ID", 0))
 
 if not BOT_TOKEN:
